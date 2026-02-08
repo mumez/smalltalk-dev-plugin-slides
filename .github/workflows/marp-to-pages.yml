@@ -30,14 +30,14 @@ jobs:
       - name: Marp Build (HTML)
         uses: docker://marpteam/marp-cli:v4.2.3
         with:
-          args: --theme-set classmethod-theme.css introducing-smalltalk-dev-plugin-en.md -o build/introducing-smalltalk-dev-plugin-en.html
+          args: --theme-set classmethod-theme.css -o build/introducing-smalltalk-dev-plugin-en.html -- introducing-smalltalk-dev-plugin-en.md
         env:
           MARP_USER: root:root
 
       - name: Marp Build (PDF)
         uses: docker://marpteam/marp-cli:v4.2.3
         with:
-          args: --theme-set classmethod-theme.css --allow-local-files introducing-smalltalk-dev-plugin-en.md -o build/introducing-smalltalk-dev-plugin-en.pdf
+          args: --theme-set classmethod-theme.css --allow-local-files -o build/introducing-smalltalk-dev-plugin-en.pdf -- introducing-smalltalk-dev-plugin-en.md
         env:
           MARP_USER: root:root
 
