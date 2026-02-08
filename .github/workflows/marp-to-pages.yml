@@ -30,19 +30,19 @@ jobs:
       - name: Marp Build (HTML)
         uses: docker://marpteam/marp-cli:v4.2.3
         with:
-          args: --theme-set classmethod-theme.css -o build/introducing-smalltalk-dev-plugin-en.html -- introducing-smalltalk-dev-plugin-en.md
+          args: --theme ./classmethod-theme.css -o build/introducing-smalltalk-dev-plugin-en.html -- introducing-smalltalk-dev-plugin-en.md
         env:
           MARP_USER: root:root
 
       - name: Marp Build (PDF)
         uses: docker://marpteam/marp-cli:v4.2.3
         with:
-          args: --theme-set classmethod-theme.css --allow-local-files -o build/introducing-smalltalk-dev-plugin-en.pdf -- introducing-smalltalk-dev-plugin-en.md
+          args: --theme ./classmethod-theme.css --allow-local-files -o build/introducing-smalltalk-dev-plugin-en.pdf -- introducing-smalltalk-dev-plugin-en.md
         env:
           MARP_USER: root:root
 
-      - name: Copy HTML as index
-        run: cp build/introducing-smalltalk-dev-plugin-en.html build/index.html
+      - name: Copy HTML as index and add .nojekyll
+        run: cp build/introducing-smalltalk-dev-plugin-en.html build/index.html && touch build/.nojekyll
 
       - name: Deploy preview
         if: ${{ github.event_name == 'pull_request' }}
