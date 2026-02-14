@@ -114,7 +114,7 @@ We gave AI the complete skillset for Smalltalk development:
 ![w:800px](images/architecture.svg)
 
 - Existing AI agents talk to Pharo via MCP — no custom IDE needed
-- Works with headless Pharo (CI, remote agents like Devin)
+- Even works with headless Pharo — usable in CI and remote agents like Devin
 
 ---
 
