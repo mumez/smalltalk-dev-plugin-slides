@@ -107,6 +107,17 @@ We gave AI the complete skillset for Smalltalk development:
 
 ---
 
+<!-- _class: content-image -->
+
+# Architecture
+
+![w:800px](images/architecture.svg)
+
+- Existing AI agents talk to Pharo via MCP — no custom IDE needed
+- Works with headless Pharo (CI, remote agents like Devin)
+
+---
+
 # Supported AI Agents
 
 | Agent | Support Level |
@@ -331,6 +342,7 @@ Please help me from the project initialization.
 </div>
 <div class="column">
 
+- [Video](https://youtu.be/FsIX0DVkOvg)
 - [Generated source](https://github.com/mumez/smalltalk-dev-plugin-money-example)
 - Demo
 
@@ -371,6 +383,7 @@ Let's start this as a GraphGear project.
 </div>
 <div class="column">
 
+- [Video](https://youtu.be/MpWw6nuDxcA)
 - [Generated source](https://github.com/mumez/smalltalk-dev-plugin-graph-example)
 - Demo
 
@@ -412,6 +425,7 @@ Only checked items can be removed. Start developing.
 </div>
 <div class="column">
 
+- [Video](https://youtu.be/9jinoL4bNDs)
 - [Generated source](https://github.com/mumez/smalltalk-dev-plugin-gui-example)
 - Demo
 
