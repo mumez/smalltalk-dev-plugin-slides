@@ -196,6 +196,15 @@ Setup scripts are provided for Cursor, Windsurf, and Antigravity:
 
 ---
 
+# Where to Launch Claude
+
+Run `claude` in an **empty directory** or your **project source directory**.
+
+- You can also point to an Iceberg repository directory
+- However, to avoid conflicts, it is better to **clone the repo into a separate directory** and use that instead
+
+---
+
 # /st:buddy — Main Entry Point
 
 `/st:buddy` is a friendly assistant that routes to the right tool.
