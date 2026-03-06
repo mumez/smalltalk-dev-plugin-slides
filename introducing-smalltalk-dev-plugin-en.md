@@ -84,8 +84,8 @@ We gave AI the complete skillset for Smalltalk development:
 | Challenge | Solution |
 |-----------|----------|
 | Environment interaction | MCP tools for Pharo communication |
-| Project structure | `/st:setup-project` with templates |
-| Testing & debugging | `/st:test`, `/st:eval`, debugger skill |
+| Project structure | `/st-setup-project` with templates |
+| Testing & debugging | `/st-test`, `/st-eval`, debugger skill |
 | Library navigation | Finder skills, code search tools |
 | Code quality | Validator, linter, commenter agent |
 
@@ -101,7 +101,7 @@ We gave AI the complete skillset for Smalltalk development:
 ### At a Glance
 
 - 9 slash commands
-- 4 specialized AI skills
+- 5 specialized AI skills
 - 27+ MCP tools for Pharo interaction
 - Automated code quality checks and documentation generation
 
@@ -183,7 +183,6 @@ Setup scripts are provided for Cursor, Windsurf, and Antigravity:
 
 ### Limitations
 
-- Commands use `st-` prefix instead of `st:`
 - Some features may differ depending on the agent
 - Pharo-side setup is the same as for Claude Code
 
@@ -205,14 +204,14 @@ Run `claude` in an **empty directory** or your **project source directory**.
 
 ---
 
-# /st:buddy — Main Entry Point
+# /st-buddy — Main Entry Point
 
-`/st:buddy` is a friendly assistant that routes to the right tool.
+`/st-buddy` is a friendly assistant that routes to the right tool.
 
 Just describe what you want in natural language:
 
 ```
-/st:buddy I want to create a Person class with name and age
+/st-buddy I want to create a Person class with name and age
 ```
 
 The assistant will:
@@ -222,7 +221,7 @@ The assistant will:
 
 ---
 
-# /st:buddy — Intelligent Routing
+# /st-buddy — Intelligent Routing
 
 | Your Intent | Loaded Skill |
 |-------------|-------------|
@@ -231,7 +230,7 @@ The assistant will:
 | "How do I use...?" | smalltalk-usage-finder |
 | "Who implements...?" | smalltalk-implementation-finder |
 
-You don't need to remember which tool to use — just talk to `/st:buddy`.
+You don't need to remember which tool to use — just talk to `/st-buddy`.
 
 ---
 
@@ -256,11 +255,11 @@ You don't need to remember which tool to use — just talk to `/st:buddy`.
 The core development skill. Knows Tonel format, package structure, and the full Edit → Lint → Import → Test workflow.
 
 ### smalltalk-debugger
-Systematic debugging specialist. Diagnoses errors, runs incremental code execution with `/st:eval`, and guides you to the fix.
+Systematic debugging specialist. Diagnoses errors, runs incremental code execution with `/st-eval`, and guides you to the fix.
 
 ---
 
-# Skills (2) — Finder Skills
+# Skills (2) — Code Finder
 
 ### smalltalk-usage-finder
 Discovers how classes and methods are used. Finds examples, analyzes usage patterns, and helps you understand unfamiliar APIs.
@@ -270,29 +269,27 @@ Finds method implementations across class hierarchies. Useful for learning codin
 
 ---
 
+# Skills (3) — Documentation
+
+### smalltalk-commenter
+Automatically suggests **CRC-style class comments** for undocumented classes. Triggered after file edits via hooks — non-intrusive and prioritizes classes that need documentation most.
+
+---
+
 # Slash Commands
 
 | Command | Purpose |
 |---------|---------|
-| `/st:buddy` | Friendly assistant (main entry) |
-| `/st:init` | Initialize development session |
-| `/st:setup-project` | Create project boilerplate |
-| `/st:eval` | Execute Smalltalk expressions |
-| `/st:import` | Import Tonel packages to Pharo |
-| `/st:export` | Export packages from Pharo |
-| `/st:test` | Run SUnit tests |
-| `/st:lint` | Check code quality |
-| `/st:validate` | Validate Tonel syntax |
+| `/st-buddy` | Friendly assistant (main entry) |
+| `/st-init` | Initialize development session |
+| `/st-setup-project` | Create project boilerplate |
+| `/st-eval` | Execute Smalltalk expressions |
+| `/st-import` | Import Tonel packages to Pharo |
+| `/st-export` | Export packages from Pharo |
+| `/st-test` | Run SUnit tests |
+| `/st-lint` | Check code quality |
+| `/st-validate` | Validate Tonel syntax |
 
----
-
-# Sub-Agent: @smalltalk-commenter
-
-Automatically suggests **CRC-style class comments** for undocumented classes.
-
-- Triggered after file edits via hooks
-- Non-intrusive — suggests, doesn't force
-- Analyzes complexity and prioritizes classes that need documentation
 
 ---
 
@@ -307,7 +304,7 @@ Pharo communication — eval, import/export, tests, code navigation, etc.
 Tonel validation and linting.
 
 **Note**: You rarely need to interact with these directly.
-`/st:buddy` handles orchestration for you.
+`/st-buddy` handles orchestration for you.
 
 ---
 
@@ -327,7 +324,7 @@ pre { font-size: 36px; }
 A simple use case: starting from an empty directory as a Smalltalk beginner.
 
 ```
-/st:buddy I'm a Smalltalk beginner. I want to create a Money class
+/st-buddy I'm a Smalltalk beginner. I want to create a Money class
 that can perform arithmetic operations across different currency units.
 Please help me from the project initialization.
 ```
@@ -368,7 +365,7 @@ pre { font-size: 36px; }
 A more complex use case for someone familiar with Smalltalk.
 
 ```
-/st:buddy I want to create GrNode and GrArc to represent directed graphs
+/st-buddy I want to create GrNode and GrArc to represent directed graphs
 and solve shortest path problems. Nodes have a name, arcs have a score.
 Let's start this as a GraphGear project.
 ```
@@ -409,7 +406,7 @@ pre { font-size: 36px; }
 Building a GUI application with Spec2.
 
 ```
-/st:buddy I want to make a simple to-do list using the Spec2 framework.
+/st-buddy I want to make a simple to-do list using the Spec2 framework.
 Include a checkbox for each item, plus an input field 
 with Add/Remove buttons at the bottom.
 Only checked items can be removed. Start developing.
@@ -446,7 +443,7 @@ Only checked items can be removed. Start developing.
 
 **smalltalk-dev-plugin** makes Pharo Smalltalk development with AI assistants practical and productive.
 
-Just type `/st:buddy` and start building.
+Just type `/st-buddy` and start building.
 
 ---
 
