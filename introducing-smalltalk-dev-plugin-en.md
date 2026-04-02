@@ -449,6 +449,46 @@ Only checked items can be removed. Start developing.
 
 ---
 
+<!-- _class: section -->
+<!-- _paginate: false -->
+
+## Case Studies
+
+---
+
+<!-- _class: section -->
+<!-- _paginate: false -->
+
+# Case Studies — Real Projects
+
+Projects created using smalltalk-dev-plugin.
+
+<div class="highlight-box">
+Both were <strong>over 90% built with Claude Code + smalltalk-dev-plugin</strong>.
+</div>
+
+---
+
+# pharo-acp
+
+A library for connecting to AI agents from the Pharo side using the ACP protocol.
+
+**Connects to**: Gemini CLI, Claude Code, OpenCode, Copilot CLI, Codex CLI, etc.
+
+https://github.com/mumez/pharo-acp
+
+---
+
+# pharo-acp-chat-ui
+
+A simple AI Chat GUI for Pharo. Uses pharo-acp internally.
+
+https://github.com/mumez/pharo-acp-chat-ui
+
+![w:600px](https://github.com/mumez/pharo-acp-chat-ui/raw/main/img/opencode-simple.png)
+
+---
+
 # Summary
 
 **smalltalk-dev-plugin** makes Pharo Smalltalk development with AI assistants practical and productive.

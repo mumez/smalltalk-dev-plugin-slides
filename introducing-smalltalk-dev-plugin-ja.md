@@ -326,16 +326,13 @@ Tonel の検証とリント。
 
 ---
 
-<style scoped>
-pre { font-size: 36px; }
-</style>
-
 # 例 1 — ゼロからのスタート
 
 空のディレクトリから Smalltalk 初心者として始めるシンプルなユースケース。
 
 ```
-/st-buddy 私はSmalltalkの初心者です。異なる通貨単位間で算術演算を行えるMoneyクラスを作成したいです。
+/st-buddy 私はSmalltalkの初心者です。
+異なる通貨単位間で算術演算を行えるMoneyクラスを作成したいです。
 プロジェクトの初期設定から手助けして。
 ```
 
@@ -366,17 +363,15 @@ pre { font-size: 36px; }
 
 ---
 
-<style scoped>
-pre { font-size: 36px; }
-</style>
-
 # 例 2 — グラフアルゴリズム
 
 Smalltalk に慣れたユーザー向けのより複雑なユースケース。
 
 ```
-/st-buddy 有向グラフを表現するためにGrNodeとGrArcを作成し、最短経路問題を解きたいと考えています。ノードにはnameが、アークにはscoreがあります。
-これをGraphGearプロジェクトとして始めましょう。
+/st-buddy 有向グラフを表現するためにGrNodeとGrArcを作成し、
+最短経路問題を解きたいと考えています。
+ノードにはnameが、アークにはscoreがあります。
+GraphGearプロジェクトとして始めましょう。
 ```
 
 ---
@@ -445,6 +440,46 @@ Spec2 を使った GUI アプリケーションの構築。
 - デモ
 
 </div>
+
+---
+
+<!-- _class: section -->
+<!-- _paginate: false -->
+
+## ケーススタディ
+
+---
+
+<!-- _class: section -->
+<!-- _paginate: false -->
+
+# ケーススタディ — 実際のプロジェクト
+
+smalltalk-dev-plugin を使って作成された実際のプロジェクトを紹介します。
+
+<div class="highlight-box">
+どちらも <strong>90% 以上が Claude Code + smalltalk-dev-plugin で作成</strong>されました。
+</div>
+
+---
+
+# pharo-acp
+
+ACP プロトコルで Pharo 側から AI エージェントに接続するためのライブラリ。
+
+**接続先**: Gemini CLI、Claude Code、OpenCode、Copilot CLI, Codex CLI など
+
+https://github.com/mumez/pharo-acp
+
+---
+
+# pharo-acp-chat-ui
+
+Pharo 向けシンプルな AI Chat GUI。内部で pharo-acp を使用。
+
+https://github.com/mumez/pharo-acp-chat-ui
+
+![w:600px](https://github.com/mumez/pharo-acp-chat-ui/raw/main/img/opencode-simple.png)
 
 ---
 
