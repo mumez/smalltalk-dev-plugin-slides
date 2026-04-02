@@ -44,7 +44,7 @@ https://github.com/mumez/smalltalk-dev-plugin
 <!-- _class: section -->
 <!-- _paginate: false -->
 
-<style scoped>
+<style>
 .highlight-box {
   margin-top: 32px;
   background-color: #e8f0fe;
@@ -73,7 +73,9 @@ Using AI coding agents with Smalltalk doesn't work well out of the box:
 - **No library access** — Can't browse existing classes or methods
 - **Poor coding style** — Doesn't know Smalltalk idioms and conventions
 
+<div class="highlight-box">
 This is a major barrier for developers who want AI assistance in Smalltalk.
+</div>
 
 ---
 
@@ -95,14 +97,14 @@ We gave AI the complete skillset for Smalltalk development:
 
 # Core Philosophy
 
-## **"AI editor as the source of truth"**
+## **"AI editing as the source of truth"**
 > Edit Tonel files in the AI editor, import to Pharo, test, and iterate.
 
 ### At a Glance
 
 - 9 slash commands
 - 5 specialized AI skills
-- 27+ MCP tools for Pharo interaction
+- 22 MCP tools for Pharo interaction
 - Automated code quality checks and documentation generation
 
 ---
@@ -126,8 +128,10 @@ We gave AI the complete skillset for Smalltalk development:
 | Cursor | Simplified setup via script |
 | Windsurf | Simplified setup via script |
 | Antigravity | Simplified setup via script |
+| GitHub Copilot CLI | Simplified setup via script |
+| OpenCode | Simplified setup via script |
 
-**The rest of this presentation focuses on the Claude Code version.**
+**The rest of this presentation focuses on the Claude Code applied version.**
 
 ---
 
@@ -152,33 +156,39 @@ claude plugin install smalltalk-dev
 
 # Installation (2) — Set Up Pharo Side
 
-Install the interop server in Pharo:
+### Option A: Docker (Easy)
+
+Use [smalltalk-interop-docker](https://github.com/mumez/smalltalk-interop-docker) to run a pre-configured Pharo image:
+
+```bash
+docker compose up -d
+```
+
+### Option B: Local Pharo
+
+Install and start the interop server manually:
 
 ```smalltalk
 Metacello new
   baseline: 'PharoSmalltalkInteropServer';
   repository: 'github://mumez/PharoSmalltalkInteropServer:master/src';
   load.
-```
 
-Start the server:
-
-```smalltalk
 SisServer current start.
 ```
-
-That's it — you're ready to go.
 
 ---
 
 # Installation — Other AI Agents
 
-Setup scripts are provided for Cursor, Windsurf, and Antigravity:
+Setup scripts are provided for each agent:
 
 ```bash
 ./extra/setup-cursor.sh [target-directory]
 ./extra/setup-windsurf.sh [target-directory]
 ./extra/setup-antigravity.sh [target-directory]
+./extra/setup-copilot.sh [target-directory]   # GitHub Copilot CLI
+./extra/setup-opencode.sh [target-directory]  # OpenCode
 ```
 
 ### Limitations
@@ -197,7 +207,7 @@ Setup scripts are provided for Cursor, Windsurf, and Antigravity:
 
 # Where to Launch Claude
 
-Run `claude` in an **empty directory** or your **project source directory**.
+Run `claude` in an **empty directory** or your **existing project directory**.
 
 - You can also point to an Iceberg repository directory
 - However, to avoid conflicts, it is better to **clone the repo into a separate directory** and use that instead
