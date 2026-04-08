@@ -171,7 +171,7 @@ Install and start the interop server manually:
 ```smalltalk
 Metacello new
   baseline: 'PharoSmalltalkInteropServer';
-  repository: 'github://mumez/PharoSmalltalkInteropServer:master/src';
+  repository: 'github://mumez/PharoSmalltalkInteropServer:main/src';
   load.
 
 SisServer current start.
