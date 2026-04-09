@@ -469,7 +469,7 @@ smalltalk-dev-plugin を使って作成された実際のプロジェクトを�
 
 ACP プロトコルで Pharo 側から AI エージェントに接続するためのライブラリ。
 
-**接続先**: Gemini CLI、Claude Code、OpenCode、Copilot CLI, Codex CLI など
+**接続先**: Gemini CLI、Claude Code、OpenCode、Copilot CLI、Codex CLI など
 
 https://github.com/mumez/pharo-acp
 
