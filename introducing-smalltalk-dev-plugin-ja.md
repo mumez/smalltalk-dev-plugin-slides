@@ -131,6 +131,7 @@ AI に Smalltalk 開発の完全なスキルセットを与えました：
 | Antigravity | スクリプトによる簡易セットアップ |
 | GitHub Copilot CLI | スクリプトによる簡易セットアップ |
 | OpenCode | スクリプトによる簡易セットアップ |
+| Codex CLI | スクリプトによる簡易セットアップ |
 
 **本プレゼンテーションでは Claude Code での利用を中心に紹介します。**
 
@@ -190,6 +191,7 @@ SisServer current start.
 ./extra/setup-antigravity.sh [target-directory]
 ./extra/setup-copilot.sh [target-directory]   # GitHub Copilot CLI
 ./extra/setup-opencode.sh [target-directory]  # OpenCode
+./extra/setup-codex.sh [target-directory]     # Codex CLI
 ```
 
 ### 制限事項

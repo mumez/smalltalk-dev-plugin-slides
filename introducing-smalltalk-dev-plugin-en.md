@@ -130,6 +130,7 @@ We gave AI the complete skillset for Smalltalk development:
 | Antigravity | Simplified setup via script |
 | GitHub Copilot CLI | Simplified setup via script |
 | OpenCode | Simplified setup via script |
+| Codex CLI | Simplified setup via script |
 
 **The rest of this presentation focuses on the Claude Code applied version.**
 
@@ -189,6 +190,7 @@ Setup scripts are provided for each agent:
 ./extra/setup-antigravity.sh [target-directory]
 ./extra/setup-copilot.sh [target-directory]   # GitHub Copilot CLI
 ./extra/setup-opencode.sh [target-directory]  # OpenCode
+./extra/setup-codex.sh [target-directory]     # Codex CLI
 ```
 
 ### Limitations
