@@ -191,9 +191,9 @@
      id="line7" />
   <rect
      x="200"
-     y="140"
+     y="114"
      width="106"
-     height="60"
+     height="26"
      rx="5"
      fill="#FFF"
      stroke="#7BA3F0"
@@ -201,11 +201,62 @@
      id="rect8" />
   <text
      x="253"
-     y="167"
+     y="131"
      text-anchor="middle"
      font-size="12"
      fill="#2C67E5"
      id="text8">Claude Code</text>
+  <rect
+     x="200"
+     y="146"
+     width="106"
+     height="26"
+     rx="5"
+     fill="#FFF"
+     stroke="#7BA3F0"
+     stroke-width="1"
+     id="rect8b" />
+  <text
+     x="253"
+     y="163"
+     text-anchor="middle"
+     font-size="12"
+     fill="#2C67E5"
+     id="text8b">Codex</text>
+  <rect
+     x="200"
+     y="178"
+     width="106"
+     height="26"
+     rx="5"
+     fill="#FFF"
+     stroke="#7BA3F0"
+     stroke-width="1"
+     id="rect8c" />
+  <text
+     x="253"
+     y="195"
+     text-anchor="middle"
+     font-size="12"
+     fill="#2C67E5"
+     id="text8c">Copilot</text>
+  <rect
+     x="200"
+     y="210"
+     width="106"
+     height="26"
+     rx="5"
+     fill="#FFF"
+     stroke="#7BA3F0"
+     stroke-width="1"
+     id="rect8d" />
+  <text
+     x="253"
+     y="227"
+     text-anchor="middle"
+     font-size="12"
+     fill="#2C67E5"
+     id="text8d">OpenCode</text>
   <!-- Plugin extension box (bottom, spanning full width) -->
   <rect
      x="40"
